@@ -1,0 +1,23 @@
+[project]
+name = "mnist"
+version = "0.1.0"
+description = "Tutorial code for deep learning through computer vision"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "torch>=2.15.0",
+    "torchvision>=0.29.2",
+]
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cpu" },
+]
+torchvision = [
+    { index = "pytorch-cpu" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
